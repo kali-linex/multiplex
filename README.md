@@ -2,6 +2,8 @@
 
 Simple tool (reverse proxy) for harassing a TCP server by hooking up multiple clients to it.
 
+(update: just use `ncat -kl 8000 | ncat localhost 1337`)
+
 Extremely barebones, limited to no error handling currently.
 
 Packets sent by the server will be replicated to all clients, packets sent by clients will be sent in a single stream, in order of arrival.
